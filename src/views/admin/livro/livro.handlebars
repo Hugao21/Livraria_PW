@@ -1,0 +1,26 @@
+<main>
+    <h2>Lista de Livros</h2>
+    <a href="/rota_livro/livro/add">
+        <button>Novo livro</button>
+    </a>
+    {{#each livros}}
+        <div>
+            <h4><b>ID:</b>{{id_livro}}</h4>
+            <small><b>Título:</b> {{titulo}} </small><br>
+            <small><b>Editora:</b> {{editora}} </small><br>
+            <small><b>Autor:</b> {{autor}} </small><br>
+
+            <a href="/rota_livro/editar_livroEditora/{{id_livro}}">
+                <button>Editar Editora livro</button>
+            </a>
+
+            <a href="/rota_livro/editar_livroAutor/{{id_livro}}">
+                <button>Editar Autor livro</button>
+            </a>
+
+            <a href="/rota_livro/deletar_livro/{{id_livro}}">
+                <button>Deletar livro</button>
+            </a>
+        </div>
+    {{/each}}
+</main>

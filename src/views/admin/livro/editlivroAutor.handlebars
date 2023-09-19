@@ -1,0 +1,35 @@
+<main>
+    <div>
+        <div>
+            <h3>Editar Aluno:</h3>
+            <div>
+                <div>
+                    <form action="/rota_livro/livro/editar_livroAutor" method="post">
+                        {{#each livros}}
+
+                        <label for="id_livro">ID:</label>
+                        <input type="text" id = "id_livro" name="id_livro" class="form-control" value="{{id_livro}}">
+                        <br>
+                        <label for="Título">Título: </label>
+                        <input type="text" id="titulo" name="titulo" value="{{titulo}}">
+                       
+                        {{/each}}
+
+                         <select name="fk_autor" class="custom-select">
+                            {{#each autores}}
+                            <option value="{{id_autor}}">{{nomeA}}</option>
+                            {{else}}
+                            <option value="0"></option>
+                            {{/each}}
+                        </select>
+                        <br>
+                        <br>
+                        <button type="submit" class="btn btn-success">Editar
+                            Aluno</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

@@ -1,0 +1,32 @@
+<main>
+    <div class="">
+        <div class="">
+            <h2>Lista Turmas</h2>
+            <hr>
+            <a href="/rota_autor/autor/add">
+                <button>Novo(a) Autor(a)</button>
+            </a>
+            {{#each autores}}
+            <div class="">
+                <div class="">
+                    <h4><b>ID:</b>{{id_autor}}</h4>
+                    <small><b>Nome:</b>{{nomeA}}</small>
+
+                
+                    <a href="/rota_autor/editar_autor/{{id_autor}}">
+                        <button>
+                            Editar Autor
+                        </button>
+                    </a>
+
+                    <a href="/rota_autor/deletar_autor/{{id_autor}}">
+                        <button>
+                            Deletar Autor
+                        </button>
+                    </a>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</main>

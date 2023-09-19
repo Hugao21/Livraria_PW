@@ -1,0 +1,38 @@
+<main>
+    <div>
+        <div>
+            <h3>Novo Aluno:</h3>
+            <div>
+                <div>
+                    <form action="/rota_livro/livro/novo" method="post">
+
+                        <label for="titulo">Título</label>
+                        <input type="text" id="titulo" name="titulo" placeholder="Matrícula do aluno">
+                        <br>
+                        <label for="editora">Editora:</label>
+                        <select name="fk_editora" class="custom-select">
+                            {{#each editoras}}
+                            <option value="{{id_editora}}">{{nome}}</option>
+                            {{else}}
+                            <option value="0">Nenhuma turma registrada</option>
+                            {{/each}}
+                        </select>
+                          <label for="autor">Autor(a):</label>
+                        <select name="fk_autor" class="custom-select">
+                            {{#each autores}}
+                            <option value="{{id_autor}}">{{nomeA}}</option>
+                            {{else}}
+                            <option value="0">Nenhuma turma registrada</option>
+                            {{/each}}
+                        </select>
+                        
+                        <br>
+                        <br>
+                        <button type="submit" class="btn btn-success">Criar
+                            Aluno</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

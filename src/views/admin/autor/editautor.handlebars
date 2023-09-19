@@ -1,0 +1,27 @@
+<main>
+    <div class="">
+        <div class="">
+        <h3> Editar Turma: </h3>
+            <div class="">
+                <div class="">
+                        <form action="/rota_autor/autor/editar_autor" method="POST">
+                       
+                        {{#each autores}}
+
+                        <label for="id_autor">ID: </label>
+                        <input type="text" name="id_autor" readonly="true" class="form-control" value="{{id_autor}}">
+                        <br>
+
+                        <label for="nomeA">Nome: </label>
+                        <input type="text" id="nomeA" name="nomeA" class="form-control" value="{{nomeA}}">
+    
+                        <button type="submit" class="btn btnsuccess">Editar Autor(a)</button>
+
+                        {{/each}}
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

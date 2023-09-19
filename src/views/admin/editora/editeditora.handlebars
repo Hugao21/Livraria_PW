@@ -1,0 +1,37 @@
+<main>
+    <div class="">
+        <div class="">
+        <h3> Editar Turma: </h3>
+            <div class="">
+                <div class="">
+                        <form action="/rota_editora/editora/editar_editora" method="POST">
+                       
+                        {{#each editoras}}
+
+                        <label for="id_editora">ID: </label>
+                        <input type="text" name="id_editora" readonly="true" class="form-control" value="{{id_editora}}">
+                        <br>
+
+                        <label for="nome">Nome: </label>
+                        <input type="text" id="nome" name="nome" class="form-control" value="{{nome}}">
+                        <br>
+                         <label for="estado">Estado: </label>
+                        <input type="text" id="estado" name="estado" class="form-control" value="{{estado}}">
+                        <br>
+                         <label for="cidade">Cidade: </label>
+                        <input type="text" id="cidade" name="cidade" class="form-control" value="{{cidade}}">
+                        <br>
+                         <label for="logradouro">Logradouro: </label>
+                        <input type="text" id="logradouro" name="logradouro" class="form-control" value="{{logradouro}}">
+                        <br>
+
+                        <button type="submit" class="btn btnsuccess">Editar Editora</button>
+
+                        {{/each}}
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

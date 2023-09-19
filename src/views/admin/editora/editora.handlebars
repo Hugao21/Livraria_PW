@@ -1,0 +1,37 @@
+<main>
+    <div class="">
+        <div class="">
+            <h2>Lista Turmas</h2>
+            <hr>
+            <a href="/rota_editora/editora/add">
+                <button>Nova Turma</button>
+            </a>
+            <a href="/rota_livro/livro"><button>
+                Cadastrar Novo Livro
+            </button></a>
+            {{#each editoras}}
+            <div class="">
+                <div class="">
+                    <h4><b>ID:</b>{{id_editora}}</h4>
+                    <small><b>Nome:</b>{{nome}}</small>
+                     <small><b>Estado:</b>{{estado}}</small>
+                      <small><b>Cidade:</b>{{cidade}}</small>
+                       <small><b>Logradouro:</b>{{logradouro}}</small>
+                
+                    <a href="/rota_editora/editar_editora/{{id_editora}}">
+                        <button>
+                            Editar Editora
+                        </button>
+                    </a>
+
+                    <a href="/rota_editora/deletar_editora/{{id_editora}}">
+                        <button>
+                            Deletar Editora
+                        </button>
+                    </a>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</main>
